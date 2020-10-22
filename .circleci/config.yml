@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: fadlyas/kernel_dockerfile:latest
+    steps:
+      - checkout
+      - run: wget https://github.com/WorkHomes/setup/raw/master/tone.sh
+      - run: bash tone.sh
